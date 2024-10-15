@@ -25,7 +25,7 @@ const Login = () => {
       navigate('/');
       e;
     } catch (error) {
-      setError('failed Auth');
+      setError('Authentication failed. Please check your credentials.');
       console.error('failed: ', error);
     }
   };
@@ -45,8 +45,8 @@ const Login = () => {
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 type="text"
                 placeholder="Enter your Username"
-                value={username} // Vincular al estado de username
-                onChange={(e) => setUsername(e.target.value)} // Actualizar el estado cuando cambie
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
               />
             </div>
             <div className="mt-4">
@@ -55,8 +55,8 @@ const Login = () => {
                 className="w-full border-2 border-gray-100 rounded-xl p-4 mt-1 bg-transparent"
                 type="password"
                 placeholder="Enter your Password"
-                value={password} // Vincular al estado de password
-                onChange={(e) => setPassword(e.target.value)} // Actualizar el estado cuando cambie
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
               />
             </div>
             <div className="mt-8 flex flex-col gap-y-4">
@@ -69,8 +69,13 @@ const Login = () => {
             </div>
           </div>
         </form>
-        {error && <p className="text-red-500 mt-4">{error}</p>}{' '}
-        {/* Mostrar error si ocurre */}
+         {error && (
+          <div className="mt-4 bg-red-100 border border-red-400 text-red-700 px-2 py-1 rounded relative
+          text-sm max-w-xs mx-auto" role="alert">
+            <strong className="font-bold">Error: </strong>
+            <span className="block sm:inline">{error}</span>
+          </div>
+        )}
       </div>
     </>
   );

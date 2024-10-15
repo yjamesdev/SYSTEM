@@ -1045,3 +1045,4 @@ C:\Users\devyi\OneDrive\Documentos\Projects\Sale-master\backend\obj\Debug\net8.0
 C:\Users\devyi\OneDrive\Documentos\Projects\Sale-master\backend\obj\Debug\net8.0\backend.genruntimeconfig.cache
 C:\Users\devyi\OneDrive\Documentos\Projects\Sale-master\backend\obj\Debug\net8.0\ref\backend.dll
 C:\Users\devyi\OneDrive\Documentos\Projects\Sale-master\backend\bin\Debug\net8.0\BCrypt.Net-Next.dll
+C:\Users\devyi\OneDrive\Documentos\Projects\Sale-master\backend\obj\Debug\net8.0\backend.sourcelink.json

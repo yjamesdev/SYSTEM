@@ -3,7 +3,7 @@ import { GoBell } from 'react-icons/go';
 import Drop from './Drop'
 
 const Header = () => {
-    const [username, SetUsername] = useState('');
+    const [username, SetUsername] = useState(false);
     const [OpenProfile, SetOpenProfile] = useState(false)
     useEffect(() => {
         const LogUser = localStorage.getItem('username')
@@ -29,8 +29,7 @@ const Header = () => {
           <div className="flex items-center space-x-5">
             <button type="button" className="relative text-2xl text-gray-600">
               <GoBell size={28} />
-              <span className="absolute top-0 right-0 -mt-1 flex justify-center items-center bg-indigo-600 text-white font-semibold text-[10px] w-5 h-4 rounded-full border-2 border-white ">
-                9
+              <span className="absolute top-0 right-0 -mt-1 flex justify-center items-center bg-indigo-600 text-white font-semibold text-[8px] w-5 h-4 rounded-full border-2 border-white ">
               </span>
             </button>
             <img
@@ -40,12 +39,10 @@ const Header = () => {
               srcset=""
               onClick={() => SetOpenProfile((prev) => !prev)}
             />
+            {OpenProfile && <Drop />}
           </div>
         </div>
       </div>
-      {
-        OpenProfile && <Drop />
-      }
     </>
   );
 };
